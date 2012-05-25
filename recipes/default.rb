@@ -6,6 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+### Install packages ###
+
 package "qt4-dev-tools" do
 	action :install
 end
@@ -15,6 +18,14 @@ package "libvtk5-dev" do
 end
 
 package "libvtk5-qt4-dev" do
+	action :install
+end
+
+package "cmake" do
+	action :install
+end
+
+package "cmake-curses-gui" do
 	action :install
 end
 
