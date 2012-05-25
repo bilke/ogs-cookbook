@@ -52,6 +52,7 @@ end
 git "/home/vagrant/ogs/sources" do
   repository "git://vismac02.intranet.ufz.de/+ff-devs/ogs5/ff-sources.git"
   reference "master"
+  user "vagrant"
   action :sync
 end
 
@@ -64,5 +65,6 @@ end
 git "/home/vagrant/ogs6/sources" do
   repository "git://github.com/ufz/ogs.git"
   reference "master"
+  user "vagrant"
   action :sync
 end
