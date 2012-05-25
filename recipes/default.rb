@@ -8,27 +8,24 @@
 #
 
 ### Install packages ###
+packages = [ "vim",
+             "cmake",
+             "cmake-curses-gui",
+             "qt4-dev-tools",
+             "libvtk5-dev",
+             "libvtk5-qt4-dev",
+             "libnetcdf-dev",
+             "libshp-dev",
+             "libgeotiff-dev"]
 
-package "qt4-dev-tools" do
-	action :install
-end
+packages.each { |current_package|
+	package current_package do
+		action :install
+	end
+}
 
-package "libvtk5-dev" do
-	action :install
-end
 
-package "libvtk5-qt4-dev" do
-	action :install
-end
-
-package "cmake" do
-	action :install
-end
-
-package "cmake-curses-gui" do
-	action :install
-end
-
+### SSH configs ###
 cookbook_file "/home/vagrant/.ssh/config" do
 	source "ssh_config"
 	mode "0644"
