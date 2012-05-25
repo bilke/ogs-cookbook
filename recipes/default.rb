@@ -40,3 +40,29 @@ cookbook_file "/home/vagrant/.ssh/known_hosts" do
 	mode "0600"
 	owner "vagrant"
 end
+
+### Clone source code ###
+
+directory "/home/vagrant/ogs" do
+  owner "vagrant"
+  mode "0755"
+  action :create
+end
+
+git "/home/vagrant/ogs/sources" do
+  repository "git://vismac02.intranet.ufz.de/+ff-devs/ogs5/ff-sources.git"
+  reference "master"
+  action :sync
+end
+
+directory "/home/vagrant/ogs6" do
+  owner "vagrant"
+  mode "0755"
+  action :create
+end
+
+git "/home/vagrant/ogs6/sources" do
+  repository "git://github.com/ufz/ogs.git"
+  reference "master"
+  action :sync
+end
