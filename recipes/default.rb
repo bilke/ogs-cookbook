@@ -17,7 +17,7 @@ packages = [ "vim",
              "libnetcdf-dev",
              "libshp-dev",
              "libgeotiff-dev",
-             "libboost-dev"]
+             "libboost1.48-dev"]
 
 packages.each { |current_package|
 	package current_package do
