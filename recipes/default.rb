@@ -16,7 +16,8 @@ packages = [ "vim",
              "libvtk5-qt4-dev",
              "libnetcdf-dev",
              "libshp-dev",
-             "libgeotiff-dev"]
+             "libgeotiff-dev",
+             "libboost-dev"]
 
 packages.each { |current_package|
 	package current_package do
