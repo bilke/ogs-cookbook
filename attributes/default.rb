@@ -3,3 +3,4 @@ default['ogs']['svn_password'] = ""
 default['ogs']['branch'] = ""
 default['ogs']['gui'] = false
 default['ogs']['benchmarks'] = false
+default['ogs']['benchmarks_ref'] = false
