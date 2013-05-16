@@ -92,5 +92,16 @@ if not node.ogs["svn_user"].empty? and not node.ogs["svn_password"].empty?
       svn_password node.ogs['svn_password']
     end
   end
+  
+  if node.ogs["benchmarks_ref"]
+    subversion "/home/vagrant/ogs5/benchmarks_ref" do
+      repository "https://svn.ufz.de/svn/ogs/trunk/benchmarks_ref"
+      revision "HEAD"
+      user "vagrant"
+      action :sync
+      svn_username node.ogs['svn_user']
+      svn_password node.ogs['svn_password']
+    end
+  end
 
 end
